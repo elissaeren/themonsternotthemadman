@@ -35,15 +35,9 @@
 		}
 
 		.list-two {
-		}
-
-		.list-three {
             text-align: center;
             font-size: 40px;
             padding-top: 20px;
-		}
-
-		.list-four {
 		}
 
 	</style>
@@ -65,15 +59,11 @@
                 "what have you become?",
                 "what you have done cannot be undone, do you realize that?",
                 "there are consequences for all actions."
+                "how could this have happened?"
 			];
 
 			// list two content
 			var two = [
-				""
-			];
-
-			// list three content
-			var three = [
 				"STOP",
                 "ERROR",
                 "SMILE",
@@ -84,16 +74,12 @@
                 "DO NOT CONTINUE",
                 "ARE YOU LISTENING",
                 "",
-                "//:"
-			];
-
-			// list four content
-			var four = [
-				""
+                "//:",
+                "RUN"
 			];
             
-            // list five content
-			var five = [
+            // list three content
+			var three = [
 				"you were warned",
                 "it is not our fault you do not heed warning",
                 "fine then, suffer",
@@ -114,15 +100,11 @@
 				var selected_one = select_random(one);
 				var selected_two = select_random(two);
 				var selected_three = select_random(three);
-				var selected_four = select_random(four);
-                var selected_five = select_random(five);
 
 				// Take the selected (random) item from list and make it visible
 				$('.list-one').html(selected_one);
 				$('.list-two').html(selected_two);
 				$('.list-three').html(selected_three);
-			    $('.list-four').html(selected_four);
-                $('.list-five').html(selected_five);
 
 			}
 
@@ -165,8 +147,6 @@
     <span class="list-one"></span> <br>
     <span class="list-two"></span> <br>
     <span class="list-three"></span> <br>
-	<span class="list-four"></span> <br>
-    <span class="list-five"></span>
 </body>
 
 </html>
