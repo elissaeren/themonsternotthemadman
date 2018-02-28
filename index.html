@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width,initial-scale=1.0">
+	<title>WHAT HAVE YOU DONE?</title>
+	
+	<!-- 
+	***** START CSS ***** 
+	-->
+	<style>
+
+		body {
+            background-image:url('https://media.giphy.com/media/2loOzCcAcPB7i/giphy.gif');
+            /*background-image:url('https://media.giphy.com/media/l4FGkp1bPTiO3ZEXe/source.gif');*/
+            /*background-image:url('https://www.hardsoftcomputers.co.uk/blog/wp-content/uploads/2014/12/crashing.gif');*/
+            color: #ffffff;
+			margin: 75px;
+            font-size: 30px;
+            text-align: center;
+			font-family: "Andale Mono", Courier, monospace;
+            padding-top: 55px;
+		}
+
+		.button-container {
+			position: fixed;
+			bottom: 75px;
+			left: 75px;
+		}
+
+		.list-one {
+
+		}
+
+		.list-two {
+		}
+
+		.list-three {
+            text-align: center;
+            font-size: 40px;
+            padding-top: 20px;
+		}
+
+		.list-four {
+		}
+
+	</style>
+	<!-- 
+	***** END CSS ***** 
+	-->
+
+
+	<!-- 
+	***** START JAVASCRIPT ***** 
+	-->
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+	<script type="text/javascript">
+		$(document).ready(function() {
+
+			// list one content
+			var one = [
+				"what have you done?",
+                "what have you become?",
+                "what you have done cannot be undone, do you realize that?",
+                "there are consequences for all actions."
+			];
+
+			// list two content
+			var two = [
+				""
+			];
+
+			// list three content
+			var three = [
+				"STOP",
+                "ERROR",
+                "SMILE",
+                "CAUTION",
+                "",
+                "!",
+                ";D",
+                "DO NOT CONTINUE",
+                "ARE YOU LISTENING",
+                "",
+                "//:"
+			];
+
+			// list four content
+			var four = [
+				""
+			];
+            
+            // list five content
+			var five = [
+				"you were warned",
+                "it is not our fault you do not heed warning",
+                "fine then, suffer",
+                "then perish",
+                ""
+			];
+
+			// This is a very common randomizing function.
+			// It takes a list (array) and returns one at random.
+			function select_random(x){
+				y = x[Math.floor(Math.random()*x.length)];
+				return y;
+			}
+
+			function generate(){
+
+				// Select a random item from each list
+				var selected_one = select_random(one);
+				var selected_two = select_random(two);
+				var selected_three = select_random(three);
+				var selected_four = select_random(four);
+                var selected_five = select_random(five);
+
+				// Take the selected (random) item from list and make it visible
+				$('.list-one').html(selected_one);
+				$('.list-two').html(selected_two);
+				$('.list-three').html(selected_three);
+			    $('.list-four').html(selected_four);
+                $('.list-five').html(selected_five);
+
+			}
+
+			$('button').click(function(){
+				generate();
+			});
+
+			generate();
+			
+		});
+
+	</script>
+	<!-- 
+	***** END JAVASCRIPT ***** 
+	-->
+
+</head>
+
+<body>
+
+	<!--
+	This is the button.
+	-->
+	<div class="button-container">
+		<button>you don't have what it takes</button>
+	</div>
+
+	<!--
+	This is the visible portion.
+
+	If you want your words or phrases to go side-by-side, change...
+
+	<div></div>
+	to
+	<span></span>
+
+	in the code below.
+	-->
+    <br>
+    <span class="list-one"></span> <br>
+    <span class="list-two"></span> <br>
+    <span class="list-three"></span> <br>
+	<span class="list-four"></span> <br>
+    <span class="list-five"></span>
+</body>
+
+</html>
